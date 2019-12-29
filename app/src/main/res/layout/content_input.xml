@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingTop="16dp"
+    android:paddingRight="16dp"
+    android:paddingLeft="16dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".InputActivity"
+    tools:showIn="@layout/activity_input">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/category"
+        android:id="@+id/category_text"
+        android:textSize="18sp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/category_edit_text"
+        android:layout_toRightOf="@id/category_text"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/category_input"
+        android:layout_below="@id/category_edit_text"
+        android:id="@+id/spinner_button1"/>
+<!--Buttonと重ねてSpinnerを配置。ユーザからはButtonしか見えない-->
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner1"
+        android:spinnerMode="dropdown"
+        android:layout_below="@id/category_edit_text"
+        android:paddingLeft="30dp"
+        android:paddingRight="60dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_marginTop="100dp"
+        android:id="@+id/parting_line"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:text="@string/title"
+        android:id="@+id/title_text"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/title_edit_text"
+        android:layout_marginTop="120dp"
+        android:layout_toRightOf="@id/title_text"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_edit_text"
+        android:text="@string/content"
+        android:id="@+id/content_text"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/content_edit_text"
+        android:layout_below="@+id/title_edit_text"
+        android:layout_toRightOf="@id/content_text"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/content_edit_text"
+        android:text="@string/date_text"
+        android:id="@+id/date_text"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/date_button"
+        android:layout_below="@id/content_edit_text"
+        android:layout_toRightOf="@id/date_text"
+        android:text="--/--/--"
+        style="@style/Widget.AppCompat.Button.Borderless"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/time_text"
+        android:layout_below="@id/content_edit_text"
+        android:layout_toRightOf="@id/date_button"
+        android:text="@string/time_text"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/times_button"
+        android:layout_below="@+id/content_edit_text"
+        android:layout_toRightOf="@id/time_text"
+        android:text="--:--"
+        style="@style/Widget.AppCompat.Button.Borderless"/>
+
+
+    <Button
+        android:layout_width="96dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/done_button"
+        android:layout_below="@id/times_button"
+        android:layout_alignParentRight="true"
+        android:text="@string/done_button"/>
+
+
+</RelativeLayout>
